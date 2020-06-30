@@ -11,8 +11,8 @@ import (
 	"os"
 	"time"
 
-	"./config"
-	"./errorcheck"
+	"github.com/DowerX/SiteAlert/config"
+	"github.com/DowerX/SiteAlert/errorcheck"
 )
 
 var c config.Config
@@ -76,7 +76,6 @@ func check() {
 func alert() {
 	to := []string{c.Email}
 	msg := []byte(c.Msg)
-	fmt.Println(to, msg)
 	err := smtp.SendMail(c.Server+c.Port, auth, c.Sender, to, msg)
 	errorcheck.Check(err)
 	writelog("Alerted.")

@@ -3,7 +3,7 @@ package config
 import (
 	"io/ioutil"
 
-	"../errorcheck"
+	"github.com/DowerX/SiteAlert/errorcheck"
 	"gopkg.in/yaml.v2"
 )
 

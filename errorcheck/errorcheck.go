@@ -1,13 +1,7 @@
 package errorcheck
 
-import (
-	"fmt"
-)
-
-func Check(err error) bool {
+func Check(err error) {
 	if err != nil {
-		fmt.Println(err.Error())
-		return false
+		panic(err)
 	}
-	return true
 }

@@ -78,5 +78,5 @@ func alert() {
 	msg := []byte(c.Msg)
 	err := smtp.SendMail(c.Server+c.Port, auth, c.Sender, to, msg)
 	errorcheck.Check(err)
-	writelog("Alerted.")
+	writelog(h)
 }
